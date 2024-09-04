@@ -3,8 +3,153 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
+  margin: 2% auto;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  align-self: center;
+}
+
+.disabled-button {
+  background-color: rgb(219, 208, 208);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  align-self: center;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:active {
+  background-color: #004494;
+  transform: scale(0.98);
+}
+
+.result-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 4% auto;
+  background-color: #e9f5ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  min-width: 30vw;
+  width: 100%;
+  box-sizing: border-box;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.result-card h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.result-card h3 {
+  margin: none;
+  padding: none;
+}
+.result-card h2 {
+  margin-top: 0;
+}
+
+.result-card p {
+  font-size: 1em;
+  margin: 4px 0;
+  padding: 0;
+}
+
+.result-card b {
+  font-weight: bold;
+}
+
+.results {
+  text-align: left;
+}
+
+.close-card {
+  position: absolute;
+  top: 1px;
+  right: 15px;
+  border: none;
+  background: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-card:hover {
+  color: #ff0000;
+}
+
+.instruction-text {
+  color: blue;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.instruction-text2 {
+  color: blue;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.instruction-text3 {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.loading-bar {
+  height: .3em;
+  background-color: #007bff;
+  animation: loading 1.5s linear infinite;
+  position: absolute;
+  top: 97%;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-37%);
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -19,13 +164,54 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 2em;
+  margin: 2% auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  min-width: 30vw;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.card-field {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-field label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-field input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.card-field input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.25);
+}
+
+button {
+  margin-top: 16px;
 }
 
 @keyframes App-logo-spin {
