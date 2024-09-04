@@ -3,7 +3,7 @@ This is a static website that receives a set of integers and a target number. Up
 To run the website locally, please follow these instructions:
 1. You need to have installed the latest version of node.js for its environment and an IDE to modify and run the source code.
 2. Clone the repository using this command:
-    - git clone https://github.com/rahmathadiyatul/melon-gaming-test.git
+    - git clone https://github.com/rahmathadiyatul/sazanka_test
 3. When cloning process is finished, make sure you are in the master branch using this command:
     - git checkout master
     - git pull origin master
